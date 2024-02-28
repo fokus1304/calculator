@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Width="600" d:DesignHeight="400"
+        x:Class="calc.MainWindow">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="95"/>
+			<RowDefinition Height="65"/>
+			<RowDefinition Height="90"/>
+			<RowDefinition Height="70"/>
+			<RowDefinition Height="85"/>
+		</Grid.RowDefinitions>
+
+		<TextBox x:Name="Display" Grid.Row="0" Grid.ColumnSpan="6" Margin="10"/>
+		<StackPanel Grid.Row="1" Orientation="Horizontal">
+			<Button Content="1" Click="Button_Click"  Height="70" Width="50" FontSize="50" Foreground="Green"/>
+			<Button Content="2" Click="Button_Click" Height="70" Width="50" FontSize="50" Foreground="Green"/>
+			<Button Content="3" Click="Button_Click"  Height="70" Width="50" FontSize="50" Foreground="Green"/>
+			<Button Content="/" Click="Button_Click" Height="70" Width="50" FontSize="47" Foreground="Red"/>
+			<Button Content="sqrt" Click="SquareRoot_Click" Height="70" Width="55" FontSize="20" Foreground="Blue"/>
+			<Button Content="x^2" Click="Power_Click" Height="70" Width="55" FontSize="24" Foreground="Blue"/>
+		</StackPanel>
+
+		<StackPanel Grid.Row="2" Orientation="Horizontal">
+			<Button Content="4" Click="Button_Click" Foreground="Green" Height="70" Width="50" FontSize="50"/>
+			<Button Content="5" Click="Button_Click" Foreground="Green" Height="70" Width="50" FontSize="50"/>
+			<Button Content="6" Click="Button_Click" Foreground="Green" Height="70" Width="50" FontSize="50"/>
+			<Button Content="*" Click="Button_Click" Foreground="Red" Height="70" Width="50" FontSize="50"/>
+			<Button Content="sin" Click="Sin_Click" Foreground="Blue" Height="70" Width="80" FontSize="45"/>
+			<Button Content="cos" Click="Cos_Click" Foreground="Blue" Height="70" Width="80" FontSize="37"/>
+		</StackPanel>
+
+		<StackPanel Grid.Row="3" Orientation="Horizontal">
+			<Button Content="7" Click="Button_Click" Foreground="Green" Height="70" Width="50" FontSize="50"/>
+			<Button Content="8" Click="Button_Click" Foreground="Green" Height="70" Width="50" FontSize="50"/>
+			<Button Content="9" Click="Button_Click" Foreground="Green" Height="70" Width="50" FontSize="50"/>
+			<Button Content="-" Click="Button_Click" Foreground="Red" Height="70" Width="50" FontSize="50"/>
+			<Button Content="tan" Click="Tan_Click" Foreground="Blue" Height="70" Width="80" FontSize="40"/>
+		</StackPanel>
+
+		<StackPanel Grid.Row="4" Orientation="Horizontal">
+			<Button Content="0" Click="Button_Click" Height="70" Width="50" FontSize="45" Foreground="Green"/>
+			<Button Content="." Click="Button_Click" Height="70" Width="50" FontSize="50" Foreground="Green"/>
+			<Button Content="C" Click="Clear_Click" Height="70" Width="50" FontSize="40" Foreground="Green"/>
+			<Button Content="+" Click="Button_Click" Height="70" Width="45" FontSize="40" Foreground="Red"/>
+			<Button Content="=" Click="Calculate_Click" Height="70" Width="50" FontSize="40" Foreground="Blue"/>
+			<Button Content="(" Click="Button_Click" Height="70" Width="50" FontSize="40" Foreground="Blue"/>
+			<Button Content=")" Click="Button_Click" Height="70" Width="50" FontSize="40" Foreground="Blue"/>
+		</StackPanel>
+
+		<StackPanel Grid.Row="5" Orientation="Horizontal">
+			<Button Content="EXP" Click="Button_Click" Height="70" Width="75" FontSize="30" Foreground="Green"/>
+			<Button Content="!" Click="Factorial_Click" Height="70" Width="77" FontSize="50" Foreground="Green"/>
+			<Button Content="%" Click="Percentage_Click" Height="70" Width="70" FontSize="50" Foreground="Red"/>
+			<Button Content="Log" Click="Log_Click" Height="70" Width="100" FontSize="45" Foreground="Blue"/>
+		</StackPanel>
+	</Grid>
+</Window>
